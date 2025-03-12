@@ -1,58 +1,78 @@
-import Image from "next/image";
+'use client'
 
-export default function Home() {
+export default function CV() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-800 to-blue-600 flex flex-col items-center text-gray-100">
+    <div style={{
+      padding: '40px', 
+      fontFamily: 'Arial, sans-serif',
+      background: 'linear-gradient(135deg, #a1c4fd, #c2e9fb)', 
+      borderRadius: '10px', 
+      boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)', 
+      maxWidth: '900px', 
+      margin: '0 auto'
+    }}>
+      <h1 style={{
+        textAlign: 'center', 
+        color: '#2c3e50', 
+        fontSize: '36px',
+        marginBottom: '20px'
+      }}>
+        Curriculum Vitae
+      </h1>
 
-      {/* Navbar dengan Rounded dan Highlight Aktif */}
-      <nav className="w-full max-w-4xl bg-gray-900 bg-opacity-70 backdrop-blur-md rounded-full shadow-lg flex justify-center space-x-6 p-4 mt-8">
-        <a href="#home" className="px-6 py-2 rounded-full bg-blue-500 text-white font-semibold transition transform hover:scale-105">
-          Home
-        </a>
-        <a href="#about" className="px-6 py-2 rounded-full text-gray-100 hover:bg-blue-400 hover:text-white transition duration-300">
-          About
-        </a>
-        <a href="#projects" className="px-6 py-2 rounded-full text-gray-100 hover:bg-blue-400 hover:text-white transition duration-300">
-          Projects
-        </a>
-        <a href="#skills" className="px-6 py-2 rounded-full text-gray-100 hover:bg-blue-400 hover:text-white transition duration-300">
-          Skills
-        </a>
-        <a href="#experience" className="px-6 py-2 rounded-full text-gray-100 hover:bg-blue-400 hover:text-white transition duration-300">
-          Experience
-        </a>
-        <a href="#contact" className="px-6 py-2 rounded-full text-gray-100 hover:bg-blue-400 hover:text-white transition duration-300">
-          Contact
-        </a>
-      </nav>
+      <div style={{
+        marginBottom: '30px', 
+        textAlign: 'center'
+      }}>
+        <img 
+          src="/rendi.jpeg" 
+          alt="Rendi Maryandi" 
+          style={{
+            width: '150px', 
+            height: '150px', 
+            borderRadius: '50%', 
+            border: '4px solid #fff', 
+            boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
+            marginBottom: '20px'
+          }} 
+        />
+        <p style={{ fontSize: '18px', color: '#34495e' }}>Rendi Maryandi</p>
+      </div>
 
-      {/* Hero Section */}
-      <div id="home" className="text-center mt-12">
-        <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">
-          Hello, I'm Rendi!
-        </h2>
+      <div style={{ marginBottom: '20px' }}>
+        <h2 style={{ color: '#2980b9' }}>Personal Information</h2>
+        <p><strong>Name:</strong> Rendi Maryandi</p>
+        <p><strong>NIM:</strong> 232302007</p>
+        <p><strong>Address:</strong> Sumedang</p>
+      </div>
 
-        {/* Gambar Profil */}
-        <div className="flex justify-center items-center mt-6">
-          <Image
-            src="/rendi.jpeg"
-            alt="Profile"
-            width={180}
-            height={180}
-            className="rounded-full border-4 border-white shadow-xl"
-          />
-        </div>
+      <div style={{ marginBottom: '20px' }}>
+        <h2 style={{ color: '#2980b9' }}>Hobbies</h2>
+        <ul style={{ color: '#34495e' }}>
+          <li>Bermain Futsal</li>
+          <li>Bermain sepak bola</li>
+          <li>Bermusik</li>
+        </ul>
+      </div>
 
-        <p className="mt-6 text-lg max-w-xl mx-auto text-gray-200 font-medium">
-          Saya seorang mahasiswa Komputerisasi Akuntansi dengan minat dalam pengembangan web dan analisis data. Saya suka menciptakan solusi teknologi yang dapat membantu memecahkan masalah dunia nyata.
-        </p>
+      <div style={{ marginBottom: '20px' }}>
+        <h2 style={{ color: '#2980b9' }}>Career Objective</h2>
+        <p><strong>Goal:</strong> Menjadi orang sukses</p>
+      </div>
 
-        {/* Button Action */}
-        <div className="mt-8">
-          <a href="#contact" className="px-8 py-3 bg-orange-500 text-white font-semibold rounded-full text-lg hover:bg-orange-600 transition duration-300">
-            Get In Touch
-          </a>
-        </div>
+      <div style={{ marginBottom: '20px' }}>
+        <h2 style={{ color: '#2980b9' }}>Education</h2>
+        <p><strong>University:</strong> Universitas Ma'soem</p>
+        <p><strong>Major:</strong> Komputerisasi Akuntansi</p>
+        <p><strong>Semester:</strong> 4</p>
+      </div>
+
+      <div style={{
+        marginTop: '40px', 
+        textAlign: 'center', 
+        color: '#34495e'
+      }}>
+        <p>&copy; 2025 Rendi Maryandi - All Rights Reserved</p>
       </div>
     </div>
   );
